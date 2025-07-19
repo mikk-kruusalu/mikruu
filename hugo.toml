@@ -96,3 +96,7 @@ url = "projects/"
 name = "CV"
 weight = 3
 url = "/cv.pdf"
+
+[caches]
+  [caches.images]
+    dir = ':cacheDir/images'
