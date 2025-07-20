@@ -1,0 +1,17 @@
+.project-card {
+  margin: 1em 0;
+  padding: 1.5em;
+  border-radius: 20px;
+  background: var(--secondary);
+  box-shadow: 0 2px 8px rgba(138, 219, 92, 0.2);
+  transition: box-shadow 0.2s;
+}
+.project-card:hover {
+  box-shadow: 0 4px 16px rgba(138, 219, 92, 0.4);
+}
+.project-card .card-title {
+  margin-bottom: 0.5em;
+  font-weight: bold;
+  /* color: #5da3e0; */
+}
+.project-card a { font-size: 90%; color: #0074d9;}
