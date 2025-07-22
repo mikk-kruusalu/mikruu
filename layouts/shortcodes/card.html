@@ -1,9 +1,0 @@
-<div class="card project-card">
-  <div class="card-body">
-    <h3 class="card-title">{{ .Get "title" }}</h3>
-    <p class="card-text">{{ .Get "descr" | markdownify }}</p>
-    {{ with .Get "link" }}
-    <a href="{{ . }}" class="stretched-link" target="_blank">Learn More</a>
-    {{ end }}
-  </div>
-</div>

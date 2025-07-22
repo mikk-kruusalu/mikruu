@@ -1,0 +1,7 @@
+<div class="card project-card">
+  <div class="card-body">
+    <h3 class="card-title">{{ .Title }}</h3>
+    <p class="card-text">{{ .Description | markdownify }}</p>
+    <a class="title" href="{{ .Params.externalLink | default .RelPermalink }}">Learn more</a>
+  </div>
+</div>
