@@ -15,7 +15,7 @@
         <div class="post-meta">
           {{ with .Params.Github }}
           <div class="github-link">
-              <a href="{{ . | safeURL }}"><i class="fa-brands fa-github"></i></a>
+              <a href="{{ . | safeURL }}" class="external-link"><i class="fa-brands fa-github"></i> Github</a>
           </div>
           {{ end }}
           <p>{{ .Params.Description | markdownify }}</p>

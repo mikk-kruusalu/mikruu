@@ -23,9 +23,9 @@ unsafe = true
 
 [params]
 author = "Mikk Kruusalu"
-# license = '<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA-4.0</a>'
+license = '<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA-4.0</a>'
 description = "Mikk Kruusalu's personal website"
-keywords = "blog,physics,mathematics,personal"
+keywords = "blog,physics,mathematics,mikk kruusalu,machine learning, numerical modelling"
 info = ["Physics", "Machine learning", "Numerical modelling"]
 avatarURL = "images/profiil.jpg"
 # gravatar = "john.doe@example.com"
@@ -98,5 +98,5 @@ weight = 3
 url = "/cv.pdf"
 
 [caches]
-  [caches.images]
-    dir = ':cacheDir/images'
+[caches.images]
+dir = ':cacheDir/images'
