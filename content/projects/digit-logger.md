@@ -4,4 +4,5 @@ draft = false
 title = 'Digit Logger'
 description = "Logs my mechanical gas meter readings with an ESP32 camera and sends them to a server"
 github = "https://github.com/mikk-kruusalu/digit-logger"
+weight = 6
 +++

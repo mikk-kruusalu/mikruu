@@ -4,6 +4,7 @@ draft = false
 title = 'Scientific Computing'
 description = "Scientific computing course projects on finite element simulations that run on the High Performance Cluster."
 github = "https://github.com/mikk-kruusalu/scientific_computing"
+weight = 3
 +++
 
 We did 3 projects with OpenFOAM and ElmerFEM.

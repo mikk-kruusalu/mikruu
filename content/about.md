@@ -4,6 +4,21 @@ draft = false
 title = 'About'
 +++
 
+<button id="reveal-email">Show e-mail</button>
+<span id="email-container"></span>
+<script>
+  document.getElementById("reveal-email").onclick = function() {
+    var user = "kruusalu.mikk";
+    var domain = "gmail.com";
+    var email = user + "@" + domain;
+    var link = '<a href="mailto:' + email + '">' + email + '</a>';
+    document.getElementById("email-container").innerHTML = link;
+    this.style.display = "none";
+  }
+</script>
+
+
+
 I am a master's student in Applied Physics. Describing the world in a quantitative way and learning about the system's behaviour by modelling is why I like studying physics.
 
 In my free time I enjoy cooking, hiking, playing football, padel and other ball games.

@@ -9,7 +9,7 @@
     </header>
     {{ .Content }}
     <ul>
-      {{- range .Paginator.Pages -}}
+      {{- range .Paginator.Pages.ByWeight -}}
         {{ partial "card.html" . }}
       {{- end -}}
     </ul>
