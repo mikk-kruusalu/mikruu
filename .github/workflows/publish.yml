@@ -16,7 +16,7 @@ jobs:
         uses: quarto-dev/quarto-actions/setup@v2
 
       - name: Install Typst
-        uses: chataigne/setup-typst@v1
+        uses: typst-community/setup-typst@v4
 
       # This step finds all your .typ files and compiles them to .svg
       # so they are available for the Quarto listing thumbnails
