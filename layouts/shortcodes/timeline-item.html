@@ -1,8 +1,0 @@
-<div class="timeline-item">
-  <h2>
-    <i class="{{ .Get "icon" | default "fa-solid fa-briefcase" }}"></i> {{ .Get "title" }}
-  </h2>
-  <h3>{{ .Get "company" | markdownify }}</h3>
-  <p class="timeline-date">{{ .Get "date" }}</p>
-  {{ .Inner | markdownify }}
-</div>

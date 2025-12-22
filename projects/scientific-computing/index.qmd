@@ -1,0 +1,23 @@
+---
+title: Scientific Computing course
+description: "Scientific computing course projects on finite element simulations that run on the High Performance Cluster."
+date: 06.01.2025
+---
+
+More details for these projets can be found [{{< fa brands github >}}](https://github.com/mikk-kruusalu/scientific_computing).
+
+## Material properties
+
+The problem was to find the effective Young's modulus and Poisson coefficient of a composite material.
+The case was set up such that we had a block of matrix material inside which there are 5 parallel fibres that have high Young's modulus and low Poisson coefficient.
+The mesh on @fig-mesh was generated with Gmsh.
+
+![Meshed geometry](figures/cube-mesh.png){#fig-mesh}
+
+The simulations were performed using ElmerFEM.
+
+## Heatsink
+
+The problem was to find the steady state temperature distribution of a given heatsink if the heating power was 100 W. The simulation result is on @fig-heatsink.
+
+![Streamlines of air in steady state](figures/heatsink.png){#fig-heatsink}

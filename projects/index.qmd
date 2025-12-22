@@ -1,0 +1,11 @@
+---
+website:
+  title: "Projects"
+contents:
+  - "*/index.qmd"
+  - "*.qmd"
+listing:
+  type: grid
+---
+
+Check out my Github profile for some more projects [{{< fa brands github >}}](https://github.com/mikk-kruusalu).

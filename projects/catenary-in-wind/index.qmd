@@ -1,0 +1,91 @@
+---
+title: Catenary in Wind
+description: The catenary problem but with a twist
+date: 12/22/2025
+filters:
+  - imagify
+---
+
+:::{style="display: none;"}
+$$
+\newcommand{\unit}[1]{\,\mathrm{#1}}
+\DeclareMathOperator{\D}{d}
+$$
+:::
+
+I came across this problem at work when we were prototyping a tethered drone system to supply in principle endless power to a multirotor drone. This can be used in natural catastrophes or military areas to cover it with a communication network. The problem described here is not really necessary for the prototyping so I took it as a personal project.
+
+I had two main questions that I was constantly asking myself:
+
+1. Can I derive the shape of the cable?
+2. How much extra downward force is added to the drone and how does it change with wind?
+
+# Derivation
+
+We look at the cable that has rigid end points $(0, 0)$ an $(x_0, y_0)$. There are two external forces acting on the cable wind $F_w$ and gravity $F_g$. @fig-loose-cable is depicting the situation. On the right there is a closeup of a small segment $\D s$ of the cable. The forces acting on this differential segment are shown in blue.
+
+![Forces Acting on a Hanging Cable](cable.svg){#fig-loose-cable}
+
+We write the force balance for both $x$ and $y$-axis
+$$
+\begin{align*}
+&x: &\quad T_x(x+\D x, y+\D y) - T_x(x, y) &= \rho g \D s \\
+&y: &\quad -T_y(x+\D x, y+\D y) + T_y(x, y) &= f_w \D x.
+\end{align*}
+$$ {#eq-force-balance}
+Here we separate the forces into perpendicular components $T_x = T \cos\alpha$ and $T_y = T \sin\alpha$.
+The parameters are mass density per unit length $\rho$ and wind pressure $f_w = F_w / l$, where $l$ is the total length of the rope. From the Pythagoras we have
+$$
+\D s = \D x \sqrt{ 1 + \left( \frac{\D y}{\D x} \right)^2 }.
+$$
+Notice that when we divide both equations by $\D x$ we have the definition of the derivative on the left side
+$$
+\begin{align*}
+\frac{\D T_x}{\D x} &= \rho g \sqrt{ 1 + \left( \frac{\D y}{\D x} \right)^2 } \\
+\frac{\D T_y}{\D x} &= -f_w.
+\end{align*}
+$$
+The second equation is easily solved and the solution is
+$$
+T_y = -f_w (x - \bar{x}),
+$$
+where $\bar{x}$ is the integration constant. The solution is a linear function that crosses zero at $\bar{x}$. Since in the rope the forces always have to be tangential to the it, the only place where $y$ component will be zero is the extremal point. From the defintions of the force components we have that $T_x = T_y/\tan\alpha = T_y / (dy/dx)$. Using the chain rule the first equation becomes
+$$
+\frac{\D T_y}{\D x} \frac{\D y}{\D x} - T_y \frac{\D^2y}{\D x^2} = \rho g \sqrt{ 1 + \left( \frac{\D y}{\D x} \right)^2 } \left( \frac{\D y}{\D x} \right)^2.
+$$
+Since we know $T_y$ we can replace it and have our final equation
+$$
+-\frac{\D y}{\D x} + (x - \bar{x}) \frac{\D^2y}{\D x^2} = \kappa \sqrt{ 1 + \left( \frac{\D y}{\D x} \right)^2 } \left( \frac{\D y}{\D x} \right)^2,
+$$
+where $\kappa = \rho g / f_w$ is a constant. This is a pretty complicated differential equation! And notice that we still do not know $\bar{x}$ but it has a very clear physical meaning. So in order to get a solvable system we can add one more constraint, the length of the rope is finite
+$$
+l = \int_0^{x_0} \D s.
+$$
+
+## Wind force
+
+For aerodynamic drag we can use a simple equation
+$$
+F_w = \frac 12 \rho v^2 C_d S,
+$$
+where $\rho$ is the air density, $v$ wind speed, $C_d$ drag coefficient and $S$ the cross-sectional area. Knowing that the cable has diameter $d=1.2\unit{mm}$ and drag coefficient of a cylinder is $C_d = 1.17$ the equation for wind pressure is
+$$
+f_w = \frac{C_d}{2} \rho v^2 d.
+$$
+
+<!-- # Solving the system -->
+
+<!-- I used Julia and DifferentialEquation.jl for solving this system. To set up the problem for the solver, we need to write it as a system of first order equations -->
+<!-- $$ -->
+<!-- \begin{align*} -->
+<!-- \frac{\D y}{\D x} &= z \\ -->
+<!-- \frac{\D z}{\D x} &= \frac{ \kappa }{ x - \bar{x} } z^2 \sqrt{ 1 + z^2 } + \frac{z}{x-\bar{x}}. -->
+<!-- \end{align*} -->
+<!-- $$ -->
+<!-- Notice the division by $(x-\bar{x})$, this approaches infinity near the turning point and caused a lot of headache for me at first. In the code I decided to add a constant $\varepsilon = 10^{-4}$ to the numerator to improve numerical stability. -->
+
+<!-- I experimented with different $\bar{x}$ manually and the numerical scheme is quite fragile. In the range $\bar{x} \in (0.3 x_0, 0.45 x_0)$ it performs quite well. However, outside of this range I could not have any of the solvers converge. -->
+
+<!-- Also, I found that the dedicated [boundary value solvers](https://docs.sciml.ai/DiffEqDocs/stable/solvers/bvp_solve/), such as `MIRK4()`, converge to a physically incorrect solution, the shooting method worked the best. -->
+
+<!-- In order to solve the equations derived before we need to set up a root finding problem $0 = l - \int ds$ inside of which we solve the differential equation which allows us to calculate the rope length. -->

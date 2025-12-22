@@ -1,0 +1,7 @@
+---
+title: Power grid topology optimisation
+description: "A course project in complex systems trying to find the best topology for a small deployable micro grid."
+date: 06.01.2025
+---
+
+The PDF report can be found [here](/assets/power-grid-optimisation.pdf)

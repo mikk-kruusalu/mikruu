@@ -1,0 +1,17 @@
+---
+title: "Mikk Kruusalu"
+image: assets/profile.jpg
+about:
+  template: jolla
+  image-shape: round
+  image-width: 400px
+  links:
+    - icon: github
+      text: Github
+      href: https://github.com/mikk-kruusalu
+    - icon: linkedin
+      text: LinkedIn
+      href: https://www.linkedin.com/in/mikk-kruusalu/
+---
+
+Applied Physics and Data Science student

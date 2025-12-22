@@ -1,0 +1,14 @@
+---
+title: Nerve signal modelling
+description: Bachelor thesis exploring the governing equations of nerve signals
+date: 06.01.2024
+---
+
+Most of the thesis was about theoretical background for nerve signal propagation in a nerve axon. So I explained the derivation of Hodgkin-Huxley model from the first principles. Since measurements show accompaning effects to the electrical pulse, they need to be studied as well. The main effect I studied was longitudinal wave in a myelinated axon. For this I used the improved Heimbur-Jackson equation
+$$
+\begin{aligned}
+u_{tt} &= [(c_{0}^{2} + pu + qu^{2})u_{x}]_x - h_{1}u_{xxxx} + h_{2}u_{xxtt} + a_1 \phi_x \\
+\phi_{tt} &= c_1^2 \phi_{xx} - \eta^2 \phi - a_2 u_x.
+\end{aligned}
+$$
+The idea was to study the behaviour of this system of equations. The code that solves and plots graphs for comparisons can be found from [{{< fa brands github >}}](https://github.com/mikk-kruusalu/heimburg_jackson).

@@ -1,0 +1,171 @@
+---
+title: "Mikk Kruusalu"
+subtitle: "Physics and Data Science"
+image: assets/profile.jpg
+about:
+  template: trestles
+  id: small-intro
+  links:
+    - icon: github
+      text: Github
+      href: https://github.com/mikk-kruusalu
+    - icon: linkedin
+      text: LinkedIn
+      href: https://www.linkedin.com/in/mikk-kruusalu/
+    - icon: envelope
+      text: Email
+      href: mailto:kruusalu.mikk@gmail.com
+format:
+  html:
+    theme:
+      - assets/timeline.scss
+---
+
+::: {#small-intro}
+
+I am a master's a student in Applied Physics and Data Science. Describing the world in a quantitative way and learning about the system's behaviour by modelling is why I like studying physics.
+
+In my free time I enjoy cooking, hiking, playing football, padel and other ball games.
+
+Find my pdf CV [here](assets/kruusalu_cv.pdf).
+
+:::
+
+::: {.timeline}
+
+::: {.timeline-item}
+::: {.header}
+::: {.icon}
+💼 
+:::
+::: {.title}
+### Development Engineer
+::: 
+::: {.dates}
+March 2023 - Present
+:::
+:::
+::: {.place}
+CAFA Tech
+:::
+- Drone tether system control loop firmware.
+- Developed a battery pack control system PCB and firmware.
+- Energy Team Lead in developing a smallscale microgrid.
+- Machine learning model for classifying objects based on their trajectories.
+- Developed a Data Acquisition System based on Beckhoff PLC and Timescale database.
+- Rapid prototyping of heat engines.
+:::
+
+::: {.timeline-item}
+::: {.icon}
+
+:::
+::: {.header}
+::: {.icon}
+🎓
+:::
+::: {.title}
+### MSc Applied Physics and Data Science
+:::
+::: {.dates}
+Sep 2024 - Present
+:::
+:::
+::: {.place}
+Tallinn University of Technology
+:::
+
+Some notable courses I have had in Master's are
+
+- scientific computing [{{< fa brands github >}}](https://github.com/mikk-kruusalu/scientific_computing), where we had three finite element projects on the High Performance Cluster.
+- Deep Learning [{{< fa brands github >}}](https://github.com/mikk-kruusalu/deep_learning_project), where we explored several different neural network architectures by defining and training these on individual projects
+- Numerical Methods, where we implemented different numerical schemes to solving Partial Differential Equations (PDE), this was continuance on the analytical PDE course.
+:::
+
+::: {.timeline-item}
+::: {.header}
+::: {.icon}
+🎓
+:::
+::: {.title}
+### Erasmus exchange student
+:::
+::: {.dates}
+Sep 2023 - Jan 2024
+:::
+:::
+::: {.place}
+Denmark University of Technology
+:::
+I had courses on
+
+- dynamical systems,
+- deep learning [{{< fa brands github >}}](https://github.com/MrCogito/Deep_learning_2023),
+- experimental course in optic communications and state space models.
+:::
+
+::: {.timeline-item}
+::: {.header}
+::: {.icon}
+💼
+:::
+::: {.title}
+### Robot Technician
+:::
+::: {.dates}
+June 2022 - March 2023
+:::
+:::
+
+::: {.place}
+Starship Technologies
+:::
+- Repaired mechanics and electronics including PCBs
+- Create tools to improve the robot’s repair process
+:::
+
+::: {.timeline-item}
+::: {.header}
+::: {.icon}
+🎓
+:::
+::: {.title}
+### BSc Applied Physics
+:::
+::: {.dates}
+Sep 2021 - June 2024
+:::
+:::
+::: {.place}
+Tallinn University of Technology 
+:::
+My thesis [{{< fa brands github >}}](https://github.com/mikk-kruusalu/heimburg_jackson) focused on modelling nerve signals and focused on the derivation of the governing equations and solving a PDE with different parametrs to understand the equations behaviour.
+
+Some notable courses I had include
+
+- basic *mathematics*, such as linear algebra, caclulus I and II, complex analysis, odrinary differential equations, numerical methods,
+- basics in *classical physics*, such as mechanics, electrodynamics, optics, thermodynamics, etc.
+- basics in *data science*, such as probability theory, statistical methods and machine learning.
+:::
+
+::: {.timeline-item}
+::: {.header}
+::: {.icon}
+💼
+:::
+::: {.title}
+### Bike mechanic
+:::
+::: {.dates}
+June 2021 - Sep 2021
+:::
+:::
+
+::: {.place}
+Hawaii Express
+:::
+:::
+
+:::
+
+This site is made with [Quarto](https://quarto.org/) and the theme has been mostly copied from [Simon](https://www.simonpcouch.com/).

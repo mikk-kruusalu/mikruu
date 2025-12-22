@@ -1,0 +1,29 @@
+project:
+  type: website
+
+website:
+  title: "Mikk Kruusalu"
+  navbar:
+    right:
+      - href: index.qmd
+        text: Home
+      - href: about.qmd
+        text: About
+      - href: projects/
+        text: Projects
+      - href: /assets/kruusalu_cv.pdf
+        text: CV
+  page-footer:
+    center: "© 2025 Mikk Kruusalu • Licensed under [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/)"
+
+format:
+  html:
+    theme:
+      - cosmo
+      - assets/styles.scss
+      - assets/colors.scss
+    toc: true
+    code-copy: true
+
+
+

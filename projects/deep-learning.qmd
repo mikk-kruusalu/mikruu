@@ -1,0 +1,16 @@
+---
+title: Deep Learning course
+description: ""
+date: 01.10.2025
+---
+
+In this course I had to sumbit 2 course works which included experimenting with different neural network architectures, such as
+
+- convolutional,
+- recurrent,
+- graph message passing,
+- autoencoder,
+- generative adversarial networks and
+- physics informed networks.
+
+All the code for running these models are in two repositories, the reports can be found in the root of the repositories. [Project 1](https://github.com/mikk-kruusalu/deep_learning_project) and [Project 2](https://github.com/mikk-kruusalu/deep_learning_project2).
