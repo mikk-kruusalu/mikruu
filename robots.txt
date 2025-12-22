@@ -1,1 +1,1 @@
-Sitemap: https://mikk-kruusalu.github.io/mikruu/sitemap.xml
+Sitemap: https://mikruu.ee/sitemap.xml

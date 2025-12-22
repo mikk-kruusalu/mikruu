@@ -1,10 +1,10 @@
 [
   {
-    "objectID": "index.html",
-    "href": "index.html",
+    "objectID": "about.html",
+    "href": "about.html",
     "title": "Mikk Kruusalu",
     "section": "",
-    "text": "Applied Physics and Data Science student"
+    "text": "Github\n  \n  \n    \n     LinkedIn\n  \n  \n    \n     Email\n  \n\n  \n  \nI am a master’s a student in Applied Physics and Data Science. Describing the world in a quantitative way and learning about the system’s behaviour by modelling is why I like studying physics.\nIn my free time I enjoy cooking, hiking, playing football, padel and other ball games.\nFind my pdf CV here.\n\n\n\n\n\n\n\n💼\n\n\nDevelopment Engineer\n\n\nMarch 2023 - Present\n\n\n\nCAFA Tech\n\n\nDrone tether system control loop firmware.\nDeveloped a battery pack control system PCB and firmware.\nEnergy Team Lead in developing a smallscale microgrid.\nMachine learning model for classifying objects based on their trajectories.\nDeveloped a Data Acquisition System based on Beckhoff PLC and Timescale database.\nRapid prototyping of heat engines.\n\n\n\n\n\n\n\n\n🎓\n\n\nMSc Applied Physics and Data Science\n\n\nSep 2024 - Present\n\n\n\nTallinn University of Technology\n\nSome notable courses I have had in Master’s are\n\nscientific computing , where we had three finite element projects on the High Performance Cluster.\nDeep Learning , where we explored several different neural network architectures by defining and training these on individual projects\nNumerical Methods, where we implemented different numerical schemes to solving Partial Differential Equations (PDE), this was continuance on the analytical PDE course.\n\n\n\n\n\n🎓\n\n\nErasmus exchange student\n\n\nSep 2023 - Jan 2024\n\n\n\nDenmark University of Technology\n\nI had courses on\n\ndynamical systems,\ndeep learning ,\nexperimental course in optic communications and state space models.\n\n\n\n\n\n💼\n\n\nRobot Technician\n\n\nJune 2022 - March 2023\n\n\n\nStarship Technologies\n\n\nRepaired mechanics and electronics including PCBs\nCreate tools to improve the robot’s repair process\n\n\n\n\n\n🎓\n\n\nBSc Applied Physics\n\n\nSep 2021 - June 2024\n\n\n\nTallinn University of Technology\n\nMy thesis  focused on modelling nerve signals and focused on the derivation of the governing equations and solving a PDE with different parametrs to understand the equations behaviour.\nSome notable courses I had include\n\nbasic mathematics, such as linear algebra, caclulus I and II, complex analysis, odrinary differential equations, numerical methods,\nbasics in classical physics, such as mechanics, electrodynamics, optics, thermodynamics, etc.\nbasics in data science, such as probability theory, statistical methods and machine learning.\n\n\n\n\n\n💼\n\n\nBike mechanic\n\n\nJune 2021 - Sep 2021\n\n\n\nHawaii Express\n\n\n\nThis site is made with Quarto and the theme has been mostly copied from Simon."
   },
   {
     "objectID": "projects/scientific-computing/index.html",
@@ -26,13 +26,6 @@
     "title": "Scientific Computing course",
     "section": "Heatsink",
     "text": "Heatsink\nThe problem was to find the steady state temperature distribution of a given heatsink if the heating power was 100 W. The simulation result is on Figure 2.\n\n\n\n\n\n\nFigure 2: Streamlines of air in steady state"
-  },
-  {
-    "objectID": "projects/nerve-signal-modelling/index.html",
-    "href": "projects/nerve-signal-modelling/index.html",
-    "title": "Nerve signal modelling",
-    "section": "",
-    "text": "Most of the thesis was about theoretical background for nerve signal propagation in a nerve axon. So I explained the derivation of Hodgkin-Huxley model from the first principles. Since measurements show accompaning effects to the electrical pulse, they need to be studied as well. The main effect I studied was longitudinal wave in a myelinated axon. For this I used the improved Heimbur-Jackson equation \\[\n\\begin{aligned}\nu_{tt} &= [(c_{0}^{2} + pu + qu^{2})u_{x}]_x - h_{1}u_{xxxx} + h_{2}u_{xxtt} + a_1 \\phi_x \\\\\n\\phi_{tt} &= c_1^2 \\phi_{xx} - \\eta^2 \\phi - a_2 u_x.\n\\end{aligned}\n\\] The idea was to study the behaviour of this system of equations. The code that solves and plots graphs for comparisons can be found from ."
   },
   {
     "objectID": "projects/deep-learning.html",
@@ -70,10 +63,17 @@
     "text": "The PDF report can be found here"
   },
   {
-    "objectID": "about.html",
-    "href": "about.html",
+    "objectID": "projects/nerve-signal-modelling/index.html",
+    "href": "projects/nerve-signal-modelling/index.html",
+    "title": "Nerve signal modelling",
+    "section": "",
+    "text": "Most of the thesis was about theoretical background for nerve signal propagation in a nerve axon. So I explained the derivation of Hodgkin-Huxley model from the first principles. Since measurements show accompaning effects to the electrical pulse, they need to be studied as well. The main effect I studied was longitudinal wave in a myelinated axon. For this I used the improved Heimbur-Jackson equation \\[\n\\begin{aligned}\nu_{tt} &= [(c_{0}^{2} + pu + qu^{2})u_{x}]_x - h_{1}u_{xxxx} + h_{2}u_{xxtt} + a_1 \\phi_x \\\\\n\\phi_{tt} &= c_1^2 \\phi_{xx} - \\eta^2 \\phi - a_2 u_x.\n\\end{aligned}\n\\] The idea was to study the behaviour of this system of equations. The code that solves and plots graphs for comparisons can be found from ."
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
     "title": "Mikk Kruusalu",
     "section": "",
-    "text": "Github\n  \n  \n    \n     LinkedIn\n  \n  \n    \n     Email\n  \n\n  \n  \nI am a master’s a student in Applied Physics and Data Science. Describing the world in a quantitative way and learning about the system’s behaviour by modelling is why I like studying physics.\nIn my free time I enjoy cooking, hiking, playing football, padel and other ball games.\nFind my pdf CV here.\n\n\n\n\n\n\n\n💼\n\n\nDevelopment Engineer\n\n\nMarch 2023 - Present\n\n\n\nCAFA Tech\n\n\nDrone tether system control loop firmware.\nDeveloped a battery pack control system PCB and firmware.\nEnergy Team Lead in developing a smallscale microgrid.\nMachine learning model for classifying objects based on their trajectories.\nDeveloped a Data Acquisition System based on Beckhoff PLC and Timescale database.\nRapid prototyping of heat engines.\n\n\n\n\n\n\n\n\n🎓\n\n\nMSc Applied Physics and Data Science\n\n\nSep 2024 - Present\n\n\n\nTallinn University of Technology\n\nSome notable courses I have had in Master’s are\n\nscientific computing , where we had three finite element projects on the High Performance Cluster.\nDeep Learning , where we explored several different neural network architectures by defining and training these on individual projects\nNumerical Methods, where we implemented different numerical schemes to solving Partial Differential Equations (PDE), this was continuance on the analytical PDE course.\n\n\n\n\n\n🎓\n\n\nErasmus exchange student\n\n\nSep 2023 - Jan 2024\n\n\n\nDenmark University of Technology\n\nI had courses on\n\ndynamical systems,\ndeep learning ,\nexperimental course in optic communications and state space models.\n\n\n\n\n\n💼\n\n\nRobot Technician\n\n\nJune 2022 - March 2023\n\n\n\nStarship Technologies\n\n\nRepaired mechanics and electronics including PCBs\nCreate tools to improve the robot’s repair process\n\n\n\n\n\n🎓\n\n\nBSc Applied Physics\n\n\nSep 2021 - June 2024\n\n\n\nTallinn University of Technology\n\nMy thesis  focused on modelling nerve signals and focused on the derivation of the governing equations and solving a PDE with different parametrs to understand the equations behaviour.\nSome notable courses I had include\n\nbasic mathematics, such as linear algebra, caclulus I and II, complex analysis, odrinary differential equations, numerical methods,\nbasics in classical physics, such as mechanics, electrodynamics, optics, thermodynamics, etc.\nbasics in data science, such as probability theory, statistical methods and machine learning.\n\n\n\n\n\n💼\n\n\nBike mechanic\n\n\nJune 2021 - Sep 2021\n\n\n\nHawaii Express\n\n\n\nThis site is made with Quarto and the theme has been mostly copied from Simon."
+    "text": "Applied Physics and Data Science student"
   }
 ]
