@@ -1,5 +1,6 @@
 project:
   type: website
+  pre-render: ./typst_compile.sh
 
 website:
   title: "Mikk Kruusalu"
