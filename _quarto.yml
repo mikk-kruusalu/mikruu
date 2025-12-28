@@ -25,6 +25,9 @@ format:
       - assets/colors.scss
     toc: true
     code-copy: true
+    include-in-header:
+      text: |
+        <script defer src="https://cloud.umami.is/script.js" data-website-id="83c22660-d951-47e8-8d22-c327405e7813"></script>
 
 
 
