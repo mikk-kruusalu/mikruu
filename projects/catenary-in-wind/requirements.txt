@@ -1,0 +1,6 @@
+jax
+optimistix
+optax
+diffrax
+equinox
+matplotlib

@@ -4,6 +4,9 @@ description: The catenary problem but with a twist
 date: 12/22/2025
 filters:
   - imagify
+format:
+  html:
+    code-fold: true
 ---
 
 :::{style="display: none;"}
@@ -22,9 +25,9 @@ I had two main questions that I was constantly asking myself:
 
 # Derivation
 
-We look at the cable that has rigid end points $(0, 0)$ an $(x_0, y_0)$. There are two external forces acting on the cable wind $F_w$ and gravity $F_g$. @fig-loose-cable is depicting the situation. On the right there is a closeup of a small segment $\D s$ of the cable. The forces acting on this differential segment are shown in blue.
+We look at the cable that has rigid end points $(0, 0)$ an $(x_0, y_0)$. There are two external forces acting on the cable, wind $F_w$ and gravity $F_g$. @fig-loose-cable is depicting the situation. On the right there is a closeup of a small segment $\D s$ of the cable. The forces acting on this differential segment are shown in blue.
 
-![Forces Acting on a Hanging Cable](cable.svg){#fig-loose-cable}
+![Forces Acting on a Hanging Cable](cable.svg){#fig-loose-cable width=80%}
 
 We write the force balance for both $x$ and $y$-axis
 $$
@@ -34,11 +37,16 @@ $$
 \end{align*}
 $$ {#eq-force-balance}
 Here we separate the forces into perpendicular components $T_x = T \cos\alpha$ and $T_y = T \sin\alpha$.
-The parameters are mass density per unit length $\rho$ and wind pressure $f_w = F_w / l$, where $l$ is the total length of the rope. From the Pythagoras we have
+The parameters are mass density per unit length $\rho$ and wind pressure $f_w = F_w / l$, where $l$ is the total length of the rope.
+
+## Naive approach
+
+We seek for the solution $y(x)$, exactly one $y$ for each $x$.
+From the Pythagoras we have
 $$
 \D s = \D x \sqrt{ 1 + \left( \frac{\D y}{\D x} \right)^2 }.
 $$
-Notice that when we divide both equations by $\D x$ we have the definition of the derivative on the left side
+Notice that when we divide both equations of system @eq-force-balance by $\D x$ we have the definition of the derivative on the left side
 $$
 \begin{align*}
 \frac{\D T_x}{\D x} &= \rho g \sqrt{ 1 + \left( \frac{\D y}{\D x} \right)^2 } \\
@@ -49,18 +57,59 @@ The second equation is easily solved and the solution is
 $$
 T_y = -f_w (x - \bar{x}),
 $$
-where $\bar{x}$ is the integration constant. The solution is a linear function that crosses zero at $\bar{x}$. Since in the rope the forces always have to be tangential to the it, the only place where $y$ component will be zero is the extremal point. From the defintions of the force components we have that $T_x = T_y/\tan\alpha = T_y / (dy/dx)$. Using the chain rule the first equation becomes
+where $\bar{x}$ is the integration constant. The solution is a linear function that crosses zero at $\bar{x}$. Since in the rope the forces always have to be tangential to it, the only place where $y$ component will be zero is the extremal point.
+From the defintions of the force components we have that $T_x = T_y/\tan\alpha = T_y / (dy/dx)$. Using the chain rule the first equation becomes
 $$
 \frac{\D T_y}{\D x} \frac{\D y}{\D x} - T_y \frac{\D^2y}{\D x^2} = \rho g \sqrt{ 1 + \left( \frac{\D y}{\D x} \right)^2 } \left( \frac{\D y}{\D x} \right)^2.
 $$
 Since we know $T_y$ we can replace it and have our final equation
 $$
--\frac{\D y}{\D x} + (x - \bar{x}) \frac{\D^2y}{\D x^2} = \kappa \sqrt{ 1 + \left( \frac{\D y}{\D x} \right)^2 } \left( \frac{\D y}{\D x} \right)^2,
+\begin{gathered}
+  -\frac{\D y}{\D x} + (x - \bar{x}) \frac{\D^2y}{\D x^2} = \kappa \sqrt{ 1 + \left( \frac{\D y}{\D x} \right)^2 } \left( \frac{\D y}{\D x} \right)^2, \\
+  l = \int_0^{x_0} \D s.
+\end{gathered}
+$$ {#eq-naive-system}
+where $\kappa = \rho g / f_w$ is a constant. This is a pretty complicated differential equation! And notice that we still do not know $\bar{x}$ but it has a very clear physical meaning. So in order to get a solvable system we need the length constraint.
+
+### Problems
+
+Solving this equation was a nightmare! I tried every possible method I knew for boundary value problems.
+
+I started by using finite differences. The optimiser [`optimistix.IndirectLevenbergMarquardt`](https://docs.kidger.site/optimistix/api/least_squares/#optimistix.IndirectLevenbergMarquardt) worked reasonably well, but I had to lower the tolerances to $10^{-3}$. It works for some very specific parameters but the final solution depends heavily on the initial guess. I used a second order polynomial with roots at the boundaries and the solution differs when scaling the initial guess.
+
+To my surprise, shooting method worked better in the sense that it found only one correct solution. But it worked in an even smaller region of parameters. The reason I was surprised was because if you write the @eq-naive-system in the form of first order differential equation system standard form, then it involves division by $(x-\bar{x})$ which includes division by zero at $\bar{x}$. But the solver handled it nicely if I added $\varepsilon=10^{-4}$ to both the nominator and denominator. From the physics we know that $\D y/\D x=0$ at $\bar{x}$. 
+
+## Parametric equation
+
+Since there were a few problems with @eq-naive-system, I needed to approach the problem from a different angle. So instead of solving for $y(x)$, now we solve for $(x(s), y(s))$, where $s$ is the cable length.
+This is beneficial because with high wind speed or very loose cable, the lower end will naturally want to drop down which would mean there are two $y$-s for each $x$.
+
+Instead of expressing the derivatives in $x$ we now divide the force balance @eq-force-balance by $\D s$
 $$
-where $\kappa = \rho g / f_w$ is a constant. This is a pretty complicated differential equation! And notice that we still do not know $\bar{x}$ but it has a very clear physical meaning. So in order to get a solvable system we can add one more constraint, the length of the rope is finite
+\begin{align}
+  \frac{\D T_x}{\D s} &= \rho g \\
+  \frac{\D T_y}{\D s} &= f_w \frac{\D x}{\D s}.
+\end{align}
 $$
-l = \int_0^{x_0} \D s.
+From @fig-loose-cable one can easily derive the geometric constraints for the Cartesian coordinates
 $$
+\frac{\D x}{\D s} = \cos{\alpha} \qquad \frac{dy}{ds} = \sin{\alpha}.
+$$
+Since the tension in the rope and the vector $(\D x, \D y)$ both have to be tangential to the rope, a similar relationship holds for tension
+$$
+\cos{\alpha} = \frac{T_x}{\sqrt{T_x^2 + T_y^2}} \qquad
+\sin{\alpha} = \frac{T_y}{\sqrt{T_x^2 + T_y^2}}.
+$$
+So putting it all together we get a system of four equations
+$$
+\begin{aligned}
+  \frac{\D x}{\D s} &= \frac{T_x}{T} &
+  \frac{\D y}{\D s} &= \frac{T_y}{T} \\
+  \frac{\D T_x}{\D s} &= \rho g &
+  \frac{\D T_y}{\D s} &= f_w \frac{T_x}{T}.
+\end{aligned}
+$$ {#eq-parametric-system}
+This system looks much easier than the one for finding $y(x)$ @eq-naive-system.
 
 ## Wind force
 
@@ -73,19 +122,37 @@ $$
 f_w = \frac{C_d}{2} \rho v^2 d.
 $$
 
-<!-- # Solving the system -->
+# Solution
 
-<!-- I used Julia and DifferentialEquation.jl for solving this system. To set up the problem for the solver, we need to write it as a system of first order equations -->
-<!-- $$ -->
-<!-- \begin{align*} -->
-<!-- \frac{\D y}{\D x} &= z \\ -->
-<!-- \frac{\D z}{\D x} &= \frac{ \kappa }{ x - \bar{x} } z^2 \sqrt{ 1 + z^2 } + \frac{z}{x-\bar{x}}. -->
-<!-- \end{align*} -->
-<!-- $$ -->
-<!-- Notice the division by $(x-\bar{x})$, this approaches infinity near the turning point and caused a lot of headache for me at first. In the code I decided to add a constant $\varepsilon = 10^{-4}$ to the numerator to improve numerical stability. -->
+The problem has 4 natural boundary conditions
+$$
+\begin{aligned}
+  x(0) &= 0 & x(L) &= x_0 \\
+  y(0) &= 0 & y(L) &= y_0.
+\end{aligned}
+$$
 
-<!-- I experimented with different $\bar{x}$ manually and the numerical scheme is quite fragile. In the range $\bar{x} \in (0.3 x_0, 0.45 x_0)$ it performs quite well. However, outside of this range I could not have any of the solvers converge. -->
+I used Jax to solve this with a shooting method.
+```{python}
+#| eval: false
+# parametric_shooting.py
+{{< include parametric_shooting.py >}}
+```
 
-<!-- Also, I found that the dedicated [boundary value solvers](https://docs.sciml.ai/DiffEqDocs/stable/solvers/bvp_solve/), such as `MIRK4()`, converge to a physically incorrect solution, the shooting method worked the best. -->
+The example cable tensions and shape is on @fig-example-sol.
+```{python}
+#| eval: false
+# example_sol.py
+{{< include example_sol.py >}}
+```
 
-<!-- In order to solve the equations derived before we need to set up a root finding problem $0 = l - \int ds$ inside of which we solve the differential equation which allows us to calculate the rope length. -->
+![Example solution for wind speed of $9 \unit{m/s}$, cable length $120 \unit{m}$ and height of $100 \unit{m}$.](cable_100-120.png){#fig-example-sol}
+
+@fig-length-tension shows that we would like to keep like ~30% slack on the cable to minimise the forces acting on the drone.
+```{python}
+#| eval: false
+# length-tension.py
+{{< include length-tension.py >}}
+```
+
+![Force acting on the drone depending on the slack with wind speed of $9 \unit{m/s}$ and height of $100 \unit{m}$.](length-tension.png){#fig-length-tension}

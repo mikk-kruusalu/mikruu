@@ -19,5 +19,6 @@ The simulations were performed using ElmerFEM.
 ## Heatsink
 
 The problem was to find the steady state temperature distribution of a given heatsink if the heating power was 100 W. The simulation result is on @fig-heatsink.
+The simulation was done using OpenFOAM.
 
 ![Streamlines of air in steady state](figures/heatsink.png){#fig-heatsink}
