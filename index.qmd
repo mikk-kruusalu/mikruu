@@ -14,4 +14,4 @@ about:
       href: https://www.linkedin.com/in/mikk-kruusalu/
 ---
 
-Applied Physics and Data Science student
+MSc Applied Physics and Data Science, Development engineer

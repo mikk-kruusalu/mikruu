@@ -3,7 +3,7 @@ title: "Mikk Kruusalu"
 subtitle: "Physics and Data Science"
 image: assets/profile.jpg
 about:
-  template: trestles
+  template: solana
   id: small-intro
   links:
     - icon: github
@@ -15,6 +15,8 @@ about:
     - icon: envelope
       text: Email
       href: mailto:kruusalu.mikk@gmail.com
+    - text: CV
+      href: /assets/kruusalu_cv.pdf
 format:
   html:
     theme:
@@ -23,13 +25,28 @@ format:
 
 ::: {#small-intro}
 
-I am a master's a student in Applied Physics and Data Science. Describing the world in a quantitative way and learning about the system's behaviour by modelling is why I like studying physics.
-
-In my free time I enjoy cooking, hiking, playing football, padel and other ball games.
-
-Find my pdf CV [here](assets/kruusalu_cv.pdf).
-
 :::
+
+I have a Master's degree in Applied Physics and Data Science _cum laude_. 
+I am passionate about modelling the real world to gain meaningful insights into its behaviour.
+I have experience in
+
+- computer vision and sensor fusion by designing a custom visual inertial odometry system for multirotor drones in CAFA Tech,
+- embedded systems both the PCB and firmware design,
+- control theory using PID loops and Kalman filters,
+- machine learning with many hands-on projects as part of the university courses and a timeseries classification model in CAFA Tech,
+- deep learning as course projects that cover all classical architectures of neural networks.
+
+I have practical experience with electronics, programming and mechanics already from the age of 14 when I competed in my first [Robotex](https://robotex.international/).
+Over the years I built many different robots for competitions such as line following, water rally, folkrace and maze solving.
+On one hand, these competitions taught me the basics of everything: programming, control theory, electronics, soldering, mechanical design and 3D printing.
+On the other hand, I had many hard lessons on robustness and quality.
+The weakest component, be it software or hardware, is always going to break the night before competition :)
+
+In my free time I have enjoyed playing football for my entire life.
+In my high-school years I was competing in Estonia's professional level.
+But I have always put studying ahead of my football career and so now I play only to keep my mind and body fresh.
+Nevertheless, I still value good work ethics, teamwork and an ambitious team around me -- on the pitch we always want to win!
 
 ::: {.timeline}
 
@@ -48,7 +65,8 @@ March 2023 - Present
 ::: {.place}
 CAFA Tech
 :::
-- Drone tether system control loop firmware.
+- Custom visual inertial odometry system for position hold of a multirotor in GPS-denied environments.
+- Drone tether system control loop firmware and electornics.
 - Developed a battery pack control system PCB and firmware.
 - Energy Team Lead in developing a smallscale microgrid.
 - Machine learning model for classifying objects based on their trajectories.
@@ -68,11 +86,12 @@ CAFA Tech
 ### MSc Applied Physics and Data Science
 :::
 ::: {.dates}
-Sep 2024 - Present
+Sep 2024 - June 2026
 :::
 :::
 ::: {.place}
-Tallinn University of Technology
+Tallinn University of Technology \
+_cum laude_
 :::
 
 Some notable courses I have had in Master's are
@@ -137,7 +156,8 @@ Sep 2021 - June 2024
 :::
 :::
 ::: {.place}
-Tallinn University of Technology 
+Tallinn University of Technology \
+_cum laude_
 :::
 My thesis [{{< fa brands github >}}](https://github.com/mikk-kruusalu/heimburg_jackson) focused on modelling nerve signals and focused on the derivation of the governing equations and solving a PDE with different parametrs to understand the equations behaviour.
 

@@ -1,11 +1,11 @@
 ---
-website:
-  title: "Projects"
-contents:
-  - "*/index.qmd"
-  - "*.qmd"
+title: "Projects"
 listing:
+  contents:
+    - "*/index.qmd"
+    - "*.qmd"
   type: grid
+  sort: date desc
 ---
 
 Check out my Github profile for some more projects [{{< fa brands github >}}](https://github.com/mikk-kruusalu).

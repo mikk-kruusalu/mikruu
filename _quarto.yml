@@ -4,6 +4,7 @@ project:
 
 website:
   title: "Mikk Kruusalu"
+  site-url: https://mikruu.ee
   navbar:
     right:
       - href: index.qmd

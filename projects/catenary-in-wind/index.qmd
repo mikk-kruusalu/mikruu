@@ -1,7 +1,7 @@
 ---
 title: Catenary in Wind
 description: The catenary problem but with a twist
-date: 12/22/2025
+date: 2025-12-22
 filters:
   - imagify
 format:
