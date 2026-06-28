@@ -4,35 +4,7 @@
     "href": "index.html",
     "title": "Mikk Kruusalu",
     "section": "",
-    "text": "Applied Physics and Data Science student"
-  },
-  {
-    "objectID": "projects/scientific-computing/index.html",
-    "href": "projects/scientific-computing/index.html",
-    "title": "Scientific Computing course",
-    "section": "",
-    "text": "More details for these projets can be found ."
-  },
-  {
-    "objectID": "projects/scientific-computing/index.html#material-properties",
-    "href": "projects/scientific-computing/index.html#material-properties",
-    "title": "Scientific Computing course",
-    "section": "Material properties",
-    "text": "Material properties\nThe problem was to find the effective Young’s modulus and Poisson coefficient of a composite material. The case was set up such that we had a block of matrix material inside which there are 5 parallel fibres that have high Young’s modulus and low Poisson coefficient. The mesh on Figure 1 was generated with Gmsh.\n\n\n\n\n\n\nFigure 1: Meshed geometry\n\n\n\nThe simulations were performed using ElmerFEM."
-  },
-  {
-    "objectID": "projects/scientific-computing/index.html#heatsink",
-    "href": "projects/scientific-computing/index.html#heatsink",
-    "title": "Scientific Computing course",
-    "section": "Heatsink",
-    "text": "Heatsink\nThe problem was to find the steady state temperature distribution of a given heatsink if the heating power was 100 W. The simulation result is on Figure 2. The simulation was done using OpenFOAM.\n\n\n\n\n\n\nFigure 2: Streamlines of air in steady state"
-  },
-  {
-    "objectID": "projects/nerve-signal-modelling/index.html",
-    "href": "projects/nerve-signal-modelling/index.html",
-    "title": "Nerve signal modelling",
-    "section": "",
-    "text": "Most of the thesis was about theoretical background for nerve signal propagation in a nerve axon. So I explained the derivation of Hodgkin-Huxley model from the first principles. Since measurements show accompaning effects to the electrical pulse, they need to be studied as well. The main effect I studied was longitudinal wave in a myelinated axon. For this I used the improved Heimbur-Jackson equation \\[\n\\begin{aligned}\nu_{tt} &= [(c_{0}^{2} + pu + qu^{2})u_{x}]_x - h_{1}u_{xxxx} + h_{2}u_{xxtt} + a_1 \\phi_x \\\\\n\\phi_{tt} &= c_1^2 \\phi_{xx} - \\eta^2 \\phi - a_2 u_x.\n\\end{aligned}\n\\] The idea was to study the behaviour of this system of equations. The code that solves and plots graphs for comparisons can be found from ."
+    "text": "MSc Applied Physics and Data Science, Development engineer"
   },
   {
     "objectID": "projects/deep-learning.html",
@@ -40,6 +12,13 @@
     "title": "Deep Learning course",
     "section": "",
     "text": "In this course I had to sumbit 2 course works which included experimenting with different neural network architectures, such as\n\nconvolutional,\nrecurrent,\ngraph message passing,\nautoencoder,\ngenerative adversarial networks and\nphysics informed networks.\n\nAll the code for running these models are in two repositories, the reports can be found in the root of the repositories. Project 1 and Project 2."
+  },
+  {
+    "objectID": "projects/index.html",
+    "href": "projects/index.html",
+    "title": "Projects",
+    "section": "",
+    "text": "Check out my Github profile for some more projects .\n\n\n\n\n\n\n\n\n\n\n\n\nVisual inertial odometry for multirotors\n\n\nMy Master’s thesis developing a VIO algorithm for position hold of a multirotor drone\n\n\n\n\n\n\nJun 28, 2026\n\n\n\n\n\n\n\n\n\n\n\nCatenary in Wind\n\n\nThe catenary problem but with a twist\n\n\n\n\n\n\nDec 22, 2025\n\n\n\n\n\n\n\n\n\n\n\nScientific Computing course\n\n\nScientific computing course projects on finite element simulations that run on the High Performance Cluster.\n\n\n\n\n\n\nJun 1, 2025\n\n\n\n\n\n\n\n\n\n\n\nPower grid topology optimisation\n\n\nA course project in complex systems trying to find the best topology for a small deployable micro grid.\n\n\n\n\n\n\nJun 1, 2025\n\n\n\n\n\n\n\n\n\n\n\nDeep Learning course\n\n\n\n\n\n\n\n\n\nJan 10, 2025\n\n\n\n\n\n\n\n\n\n\n\nNerve signal modelling\n\n\nBachelor thesis exploring the governing equations of nerve signals\n\n\n\n\n\n\nJun 4, 2024\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "projects/catenary-in-wind/index.html",
@@ -70,11 +49,39 @@
     "text": "Wind force\nFor aerodynamic drag we can use a simple equation \\[\nF_w = \\frac 12 \\rho v^2 C_d S,\n\\] where \\(\\rho\\) is the air density, \\(v\\) wind speed, \\(C_d\\) drag coefficient and \\(S\\) the cross-sectional area. Knowing that the cable has diameter \\(d=1.2\\unit{mm}\\) and drag coefficient of a cylinder is \\(C_d = 1.17\\) the equation for wind pressure is \\[\nf_w = \\frac{C_d}{2} \\rho v^2 d.\n\\]"
   },
   {
-    "objectID": "projects/index.html",
-    "href": "projects/index.html",
-    "title": "Mikk Kruusalu",
+    "objectID": "projects/nerve-signal-modelling/index.html",
+    "href": "projects/nerve-signal-modelling/index.html",
+    "title": "Nerve signal modelling",
     "section": "",
-    "text": "Check out my Github profile for some more projects .\n\n\n\n\n\n\n\n\n\n\n\n\nCatenary in Wind\n\n\nThe catenary problem but with a twist\n\n\n\n\n\n\nDec 22, 2025\n\n\n\n\n\n\n\n\n\n\n\nDeep Learning course\n\n\n\n\n\n\n\n\n\nJan 10, 2025\n\n\n\n\n\n\n\n\n\n\n\nNerve signal modelling\n\n\nBachelor thesis exploring the governing equations of nerve signals\n\n\n\n\n\n\nJun 1, 2024\n\n\n\n\n\n\n\n\n\n\n\nPower grid topology optimisation\n\n\nA course project in complex systems trying to find the best topology for a small deployable micro grid.\n\n\n\n\n\n\nJun 1, 2025\n\n\n\n\n\n\n\n\n\n\n\nScientific Computing course\n\n\nScientific computing course projects on finite element simulations that run on the High Performance Cluster.\n\n\n\n\n\n\nJun 1, 2025\n\n\n\n\n\n\nNo matching items"
+    "text": "Most of the thesis was about theoretical background for nerve signal propagation in a nerve axon. So I explained the derivation of Hodgkin-Huxley model from the first principles. Since measurements show accompaning effects to the electrical pulse, they need to be studied as well. The main effect I studied was longitudinal wave in a myelinated axon. For this I used the improved Heimbur-Jackson equation \\[\n\\begin{aligned}\nu_{tt} &= [(c_{0}^{2} + pu + qu^{2})u_{x}]_x - h_{1}u_{xxxx} + h_{2}u_{xxtt} + a_1 \\phi_x \\\\\n\\phi_{tt} &= c_1^2 \\phi_{xx} - \\eta^2 \\phi - a_2 u_x.\n\\end{aligned}\n\\] The idea was to study the behaviour of this system of equations. The code that solves and plots graphs for comparisons can be found from .\nThe thesis is published here."
+  },
+  {
+    "objectID": "projects/scientific-computing/index.html",
+    "href": "projects/scientific-computing/index.html",
+    "title": "Scientific Computing course",
+    "section": "",
+    "text": "More details for these projets can be found ."
+  },
+  {
+    "objectID": "projects/scientific-computing/index.html#material-properties",
+    "href": "projects/scientific-computing/index.html#material-properties",
+    "title": "Scientific Computing course",
+    "section": "Material properties",
+    "text": "Material properties\nThe problem was to find the effective Young’s modulus and Poisson coefficient of a composite material. The case was set up such that we had a block of matrix material inside which there are 5 parallel fibres that have high Young’s modulus and low Poisson coefficient. The mesh on Figure 1 was generated with Gmsh.\n\n\n\n\n\n\nFigure 1: Meshed geometry\n\n\n\nThe simulations were performed using ElmerFEM."
+  },
+  {
+    "objectID": "projects/scientific-computing/index.html#heatsink",
+    "href": "projects/scientific-computing/index.html#heatsink",
+    "title": "Scientific Computing course",
+    "section": "Heatsink",
+    "text": "Heatsink\nThe problem was to find the steady state temperature distribution of a given heatsink if the heating power was 100 W. The simulation result is on Figure 2. The simulation was done using OpenFOAM.\n\n\n\n\n\n\nFigure 2: Streamlines of air in steady state"
+  },
+  {
+    "objectID": "projects/msc-thesis.html",
+    "href": "projects/msc-thesis.html",
+    "title": "Visual inertial odometry for multirotors",
+    "section": "",
+    "text": "Multirotor drones are widely used as sensor platforms. In many cases the drone itself does not need to move large distances but provide a persistent aerial platform. For these applications, one solution is a tethered drone that is connected to a power source on the ground. Such a product is developed by CAFA Tech.\nThe drone needs automatic position hold system to stay above the power source. However, in many applications GPS, which is the de facto standard for outdoor localisation, can not be used due to signal jamming or spoofing. Therefore, an alternative positioning method was needed.\nThe thesis provides a theoretical overview of the computer vision and sensor fusion methods used in state-of-the-art algorithms. Based on this knowledge, I proposed an application specific visual inertial odometry method that utilises the geometry and hardware of the given problem. This results in a method that is computationally more efficient than general state-of-the-art algorithms and more tolerant to noise due to additional physical constraints.\nThe thesis has a publication restriction but the abstract is published here."
   },
   {
     "objectID": "projects/power-grid-optimisation.html",
@@ -88,6 +95,6 @@
     "href": "about.html",
     "title": "Mikk Kruusalu",
     "section": "",
-    "text": "Github\n  \n  \n    \n     LinkedIn\n  \n  \n    \n     Email\n  \n\n  \n  \nI am a master’s a student in Applied Physics and Data Science. Describing the world in a quantitative way and learning about the system’s behaviour by modelling is why I like studying physics.\nIn my free time I enjoy cooking, hiking, playing football, padel and other ball games.\nFind my pdf CV here.\n\n\n\n\n\n\n\n💼\n\n\nDevelopment Engineer\n\n\nMarch 2023 - Present\n\n\n\nCAFA Tech\n\n\nDrone tether system control loop firmware.\nDeveloped a battery pack control system PCB and firmware.\nEnergy Team Lead in developing a smallscale microgrid.\nMachine learning model for classifying objects based on their trajectories.\nDeveloped a Data Acquisition System based on Beckhoff PLC and Timescale database.\nRapid prototyping of heat engines.\n\n\n\n\n\n\n\n\n🎓\n\n\nMSc Applied Physics and Data Science\n\n\nSep 2024 - Present\n\n\n\nTallinn University of Technology\n\nSome notable courses I have had in Master’s are\n\nscientific computing , where we had three finite element projects on the High Performance Cluster.\nDeep Learning , where we explored several different neural network architectures by defining and training these on individual projects\nNumerical Methods, where we implemented different numerical schemes to solving Partial Differential Equations (PDE), this was continuance on the analytical PDE course.\n\n\n\n\n\n🎓\n\n\nErasmus exchange student\n\n\nSep 2023 - Jan 2024\n\n\n\nDenmark University of Technology\n\nI had courses on\n\ndynamical systems,\ndeep learning ,\nexperimental course in optic communications and state space models.\n\n\n\n\n\n💼\n\n\nRobot Technician\n\n\nJune 2022 - March 2023\n\n\n\nStarship Technologies\n\n\nRepaired mechanics and electronics including PCBs\nCreate tools to improve the robot’s repair process\n\n\n\n\n\n🎓\n\n\nBSc Applied Physics\n\n\nSep 2021 - June 2024\n\n\n\nTallinn University of Technology\n\nMy thesis  focused on modelling nerve signals and focused on the derivation of the governing equations and solving a PDE with different parametrs to understand the equations behaviour.\nSome notable courses I had include\n\nbasic mathematics, such as linear algebra, caclulus I and II, complex analysis, odrinary differential equations, numerical methods,\nbasics in classical physics, such as mechanics, electrodynamics, optics, thermodynamics, etc.\nbasics in data science, such as probability theory, statistical methods and machine learning.\n\n\n\n\n\n💼\n\n\nBike mechanic\n\n\nJune 2021 - Sep 2021\n\n\n\nHawaii Express\n\n\n\nThis site is made with Quarto and the theme has been mostly copied from Simon."
+    "text": "Github\n  \n  \n    \n     LinkedIn\n  \n  \n    \n     Email\n  \n  \n     CV\n  \n\n      \n\n    \n    \n  \n\n\nI have a Master’s degree in Applied Physics and Data Science cum laude. I am passionate about modelling the real world to gain meaningful insights into its behaviour. I have experience in\n\ncomputer vision and sensor fusion by designing a custom visual inertial odometry system for multirotor drones in CAFA Tech,\nembedded systems both the PCB and firmware design,\ncontrol theory using PID loops and Kalman filters,\nmachine learning with many hands-on projects as part of the university courses and a timeseries classification model in CAFA Tech,\ndeep learning as course projects that cover all classical architectures of neural networks.\n\nI have practical experience with electronics, programming and mechanics already from the age of 14 when I competed in my first Robotex. Over the years I built many different robots for competitions such as line following, water rally, folkrace and maze solving. On one hand, these competitions taught me the basics of everything: programming, control theory, electronics, soldering, mechanical design and 3D printing. On the other hand, I had many hard lessons on robustness and quality. The weakest component, be it software or hardware, is always going to break the night before competition :)\nIn my free time I have enjoyed playing football for my entire life. In my high-school years I was competing in Estonia’s professional level. But I have always put studying ahead of my football career and so now I play only to keep my mind and body fresh. Nevertheless, I still value good work ethics, teamwork and an ambitious team around me – on the pitch we always want to win!\n\n\n\n\n💼\n\n\nDevelopment Engineer\n\n\nMarch 2023 - Present\n\n\n\nCAFA Tech\n\n\nCustom visual inertial odometry system for position hold of a multirotor in GPS-denied environments.\nDrone tether system control loop firmware and electornics.\nDeveloped a battery pack control system PCB and firmware.\nEnergy Team Lead in developing a smallscale microgrid.\nMachine learning model for classifying objects based on their trajectories.\nDeveloped a Data Acquisition System based on Beckhoff PLC and Timescale database.\nRapid prototyping of heat engines.\n\n\n\n\n\n\n\n\n🎓\n\n\nMSc Applied Physics and Data Science\n\n\nSep 2024 - June 2026\n\n\n\nTallinn University of Technology\ncum laude\n\nSome notable courses I have had in Master’s are\n\nscientific computing , where we had three finite element projects on the High Performance Cluster.\nDeep Learning , where we explored several different neural network architectures by defining and training these on individual projects\nNumerical Methods, where we implemented different numerical schemes to solving Partial Differential Equations (PDE), this was continuance on the analytical PDE course.\n\n\n\n\n\n🎓\n\n\nErasmus exchange student\n\n\nSep 2023 - Jan 2024\n\n\n\nDenmark University of Technology\n\nI had courses on\n\ndynamical systems,\ndeep learning ,\nexperimental course in optic communications and state space models.\n\n\n\n\n\n💼\n\n\nRobot Technician\n\n\nJune 2022 - March 2023\n\n\n\nStarship Technologies\n\n\nRepaired mechanics and electronics including PCBs\nCreate tools to improve the robot’s repair process\n\n\n\n\n\n🎓\n\n\nBSc Applied Physics\n\n\nSep 2021 - June 2024\n\n\n\nTallinn University of Technology\ncum laude\n\nMy thesis  focused on modelling nerve signals and focused on the derivation of the governing equations and solving a PDE with different parametrs to understand the equations behaviour.\nSome notable courses I had include\n\nbasic mathematics, such as linear algebra, caclulus I and II, complex analysis, odrinary differential equations, numerical methods,\nbasics in classical physics, such as mechanics, electrodynamics, optics, thermodynamics, etc.\nbasics in data science, such as probability theory, statistical methods and machine learning.\n\n\n\n\n\n💼\n\n\nBike mechanic\n\n\nJune 2021 - Sep 2021\n\n\n\nHawaii Express\n\n\n\nThis site is made with Quarto and the theme has been mostly copied from Simon."
   }
 ]
