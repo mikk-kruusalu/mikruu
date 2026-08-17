@@ -7,7 +7,7 @@
     lastname: "Kruusalu",
     email: "kruusalu.mikk@gmail.com",
     homepage: "https://mikruu.ee",
-    phone: "53030327",
+    phone: "+37253030327",
     github: "mikk-kruusalu",
     //twitter: "typstapp",
     //scholar: "",
@@ -84,7 +84,7 @@
 
   = Skills
 
-  #resume-skill-item("Languages", (strong("Estonian"), "English (C1)"))
+  #resume-skill-item("Languages", ([*Estonian*, English (C1)],))
   #resume-skill-item(
     "Programming",
     (
@@ -94,7 +94,7 @@
   )
   #resume-skill-item(
     "Programs",
-    ("Autodesk Fusion 360", "Kicad", "OpenFOAM", "ElmerFEM", "Paraview"),
+    ([Autodesk Fusion 360, Kicad, OpenFOAM, ElmerFEM, Paraview],),
   )
   #colbreak()
 
@@ -129,8 +129,17 @@
   = Experience
 
   #resume-entry(
+    title: "Radar Development Team Lead",
+    date: "July 2026 - Present",
+    description: "CAFA Tech",
+  )
+  #resume-item[
+    Team lead for developing a cost-effective X-band radar for small drone detection.
+  ]
+
+  #resume-entry(
     title: "Development Engineer",
-    date: "Mar 2023 - Present",
+    date: "Mar 2023 - June 2026",
     description: "CAFA Tech",
   )
   #resume-item[

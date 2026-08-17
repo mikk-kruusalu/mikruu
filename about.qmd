@@ -27,7 +27,7 @@ format:
 
 :::
 
-I have a Master's degree in Applied Physics and Data Science _cum laude_. 
+I have a Master's degree in Applied Physics and Data Science _cum laude_.
 I am passionate about modelling the real world to gain meaningful insights into its behaviour.
 I have experience in
 
@@ -53,13 +53,31 @@ Nevertheless, I still value good work ethics, teamwork and an ambitious team aro
 ::: {.timeline-item}
 ::: {.header}
 ::: {.icon}
-💼 
+💼
+:::
+::: {.title}
+### Radar Development Team Lead
+:::
+::: {.dates}
+July 2023 - Present
+:::
+:::
+::: {.place}
+CAFA Tech
+:::
+- Leading a team of engineers to develop a cost-effective radar system for small drone detection.
+:::
+
+::: {.timeline-item}
+::: {.header}
+::: {.icon}
+💼
 :::
 ::: {.title}
 ### Development Engineer
-::: 
+:::
 ::: {.dates}
-March 2023 - Present
+March 2023 - June 2026
 :::
 :::
 ::: {.place}
