@@ -66,6 +66,7 @@ July 2023 - Present
 CAFA Tech
 :::
 Team lead for developing a cost-effective X-band radar for small drone detection.
+
 - Signal processing.
 - High-level radar architecture modelling.
 - Efficient communication between mechanical, RF, software engineers and academics.
