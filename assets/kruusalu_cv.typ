@@ -39,7 +39,7 @@
   #resume-entry(
     title: "Radar Development Team Lead",
     date: "July 2026 - Present",
-    description: "CAFA Tech",
+    description: "R&D Company",
   )
   #resume-item[
     Team lead for developing a cost-effective X-band radar for small drone detection.
@@ -52,7 +52,7 @@
   #resume-entry(
     title: "Development Engineer",
     date: "Mar 2023 - June 2026",
-    description: "CAFA Tech",
+    description: "R&D Company",
   )
   #resume-item[
     - Custom visual inertial odometry system for position hold of a multirotor in GPS-denied environments.
@@ -101,7 +101,7 @@
   #resume-entry(
     title: "MSc Applied Physics and Data Science",
     date: "Sep 2024 - June 2026",
-    description: "TalTech, Cum laude",
+    description: "TalTech, Cum laude 4.9/5",
   )
   #resume-item[
     - Mathematical Modelling, Machine learning, Deep Learning, Numerical methods, Scientific computing
@@ -117,7 +117,7 @@
   #resume-entry(
     title: "BSc Applied Physics",
     date: "Sep 2021 - June 2024",
-    description: "TalTech, Cum laude",
+    description: "TalTech, Cum laude 5.0/5",
   )
   #resume-item[
     - Thesis -- modelling nerve signal propagation in an axon

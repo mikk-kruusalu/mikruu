@@ -1,13 +1,13 @@
 ---
 title: Visual inertial odometry for multirotors
 description: My Master's thesis developing a VIO algorithm for position hold of a multirotor drone
-date: 2026-06-28    
+date: 2026-06-28
 ---
 
 Multirotor drones are widely used as sensor platforms.
 In many cases the drone itself does not need to move large distances but provide a persistent aerial platform.
 For these applications, one solution is a tethered drone that is connected to a power source on the ground.
-Such a product is developed by [CAFA Tech](https://cafatech.com).
+Such a product is developed by a R&D Company in Estonia.
 
 The drone needs automatic position hold system to stay above the power source.
 However, in many applications GPS, which is the _de facto_ standard for outdoor localisation, can not be used due to signal jamming or spoofing.

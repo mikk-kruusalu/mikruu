@@ -16,18 +16,20 @@
         pkgs = nixpkgs.legacyPackages.${system};
 
         # https://github.com/NixOS/nixpkgs/issues/519484
-        patchedQuarto =
-          pkgs.quarto.overrideAttrs
-            (oldAttrs: {
-              postPatch = (oldAttrs.postPatch or "") + ''
-                substituteInPlace bin/quarto.js \
-                  --replace-fail "syntax-highlighting" "highlight-style"
-              '';
-            });
+        patchedQuarto = pkgs.quarto.overrideAttrs (oldAttrs: {
+          postPatch = (oldAttrs.postPatch or "") + ''
+            substituteInPlace bin/quarto.js \
+              --replace-fail "syntax-highlighting" "highlight-style"
+          '';
+        });
 
         pythonEnv = pkgs.python3.withPackages (
           ps: with ps; [
             jupyter
+            ipykernel
+            nbformat
+            nbclient
+            pyyaml
           ]
         );
       in
@@ -46,9 +48,12 @@
 
           TYPST_FONT_PATHS = pkgs.lib.makeSearchPathOutput "share/fonts" "" [
             pkgs.source-sans
+            pkgs.source-sans-pro
             pkgs.roboto
             pkgs.font-awesome
           ];
+
+          QUARTO_PYTHON = "${pythonEnv}/bin/python";
 
           shellHook = ''
             echo "Website dev env ready"

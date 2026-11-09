@@ -1,3 +1,13 @@
+# /// script
+# requires-python = ">=3.13"
+# dependencies = [
+#     "diffrax>=0.7.2",
+#     "equinox>=0.13.8",
+#     "jax>=0.11.2",
+#     "jaxtyping>=0.3.11",
+#     "optimistix>=0.1.0",
+# ]
+# ///
 import jax.numpy as jnp
 import diffrax
 import equinox as eqx

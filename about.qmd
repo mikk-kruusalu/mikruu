@@ -31,10 +31,10 @@ I have a Master's degree in Applied Physics and Data Science _cum laude_.
 I am passionate about modelling the real world to gain meaningful insights into its behaviour.
 I have experience in
 
-- computer vision and sensor fusion by designing a custom visual inertial odometry system for multirotor drones in CAFA Tech,
+- computer vision and sensor fusion by designing a custom visual inertial odometry system for multirotor drones,
 - embedded systems both the PCB and firmware design,
 - control theory using PID loops and Kalman filters,
-- machine learning with many hands-on projects as part of the university courses and a timeseries classification model in CAFA Tech,
+- machine learning with many hands-on projects as part of the university courses and a timeseries classification model for determining the type of a target from radar tracks,
 - deep learning as course projects that cover all classical architectures of neural networks.
 
 I have practical experience with electronics, programming and mechanics already from the age of 14 when I competed in my first [Robotex](https://robotex.international/).
@@ -63,7 +63,7 @@ July 2023 - Present
 :::
 :::
 ::: {.place}
-CAFA Tech
+R&D Company
 :::
 Team lead for developing a cost-effective X-band radar for small drone detection.
 
@@ -85,7 +85,7 @@ March 2023 - June 2026
 :::
 :::
 ::: {.place}
-CAFA Tech
+R&D Company
 :::
 - Custom visual inertial odometry system for position hold of a multirotor in GPS-denied environments.
 - Drone tether system control loop firmware and electornics.
